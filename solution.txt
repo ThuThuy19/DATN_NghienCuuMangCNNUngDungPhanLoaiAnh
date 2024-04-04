@@ -1,0 +1,13 @@
+Để sử dụng thuật toán phân cụm để phân nhóm các răng, bạn có thể làm như sau:
+
+1.Trích xuất các thông tin về răng từ đầu ra của mô hình YOLO. Bạn cần lấy ra tọa độ của các bounding box tương ứng với các răng và các thông tin liên quan khác như điểm trung tâm, chiều rộng và chiều dài của bounding box.
+
+2. Áp dụng thuật toán phân cụm để phân nhóm các răng. Có nhiều phương pháp phân cụm khác nhau, trong đó phương pháp K-means là phương pháp phổ biến và có thể áp dụng được cho bài toán này. Bạn có thể chọn số lượng nhóm phù hợp tùy thuộc vào số lượng răng và độ phân chia mong muốn.
+
+3. Kiểm tra các nhóm răng được phân cụm. Bạn có thể tính toán trung bình hoặc trung vị của các thông tin về tọa độ, chiều rộng và chiều dài của bounding box trong mỗi nhóm răng. Sau đó, bạn có thể so sánh các giá trị này giữa các nhóm răng để kiểm tra xem có sự lệch nhau hay không.
+
+4. Nếu có răng nằm trong cùng một nhóm bị lệch so với các răng khác, bạn có thể xử lý các răng này bằng cách sử dụng các phép biến đổi hình học để cân bằng kích thước và hướng của chúng, hoặc sử dụng các phương pháp học máy để dự đoán vị trí và hướng của các răng bị lệch.
+
+
+.YOLO
+.K-means
