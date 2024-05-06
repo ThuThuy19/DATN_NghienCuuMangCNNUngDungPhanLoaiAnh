@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 if __name__ == '__main__':
     path_model = './train18/weights/best.pt'  # Đường dẫn tới tập tin trọng số của mô hình YOLO
     model = yolo(path_model)  # Tạo một đối tượng yolo với mô hình YOLO được tải từ đường dẫn
-    image = cv2.imread("/home/thinhdo/WorkSpace/NCKH/images/136.JPG")  # Đọc ảnh từ đường dẫn
+    image = cv2.imread("./images/4.JPG")  # Đọc ảnh từ đường dẫn
     clone_image = cv2.resize(image, (640, 640))  # Resize ảnh về kích thước 640x640
     image = clone_image  # Gán ảnh đã resize cho biến image
     
@@ -43,3 +43,4 @@ if __name__ == '__main__':
     # Tính trung bình các tọa độ của các đối tượng trong từng nhóm
     group_1_mean = np.mean(group_1, axis=0)
     group_2_mean = np.mean(group_2, axis=0)
+

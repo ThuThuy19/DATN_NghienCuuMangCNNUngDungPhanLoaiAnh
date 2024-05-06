@@ -9,7 +9,7 @@ if __name__ == '__main__':
     model = yolo(path_model)
 
     # Đọc ảnh đầu vào
-    image = cv2.imread("./images/16.JPG")
+    image = cv2.imread("./images/4.JPG")
 
     # Resize ảnh về kích thước 640x640
     clone_image = cv2.resize(image, (640, 640))
@@ -87,3 +87,4 @@ if __name__ == '__main__':
     # Đợi người dùng nhập để đóng cửa sổ
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+
