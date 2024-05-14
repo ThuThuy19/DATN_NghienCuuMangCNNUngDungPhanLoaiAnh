@@ -1,15 +1,12 @@
-from detector import yolo 
+from detector import YOLODetector 
 import numpy as np
-import cv2
-from detector import yolo  
-import numpy as np  
-import cv2  
+import cv2 
 
 
 if __name__ == '__main__':
     # Load mô hình YOLO
     path_model = './train18/weights/best.pt'
-    model = yolo(path_model)
+    model = YOLODetector(path_model)
      # Đọc ảnh đầu vào
     image = cv2.imread("./images/4.JPG")
 
@@ -70,7 +67,8 @@ if __name__ == '__main__':
                 cv2.rectangle(clone_image, (x, y), (x + w, y + h), (0, 0, 255), 1)
                   # Lưu ảnh với bounding box
     k = np.random.randint(0, 2000)
-    cv2.imwrite("/home/thinhdo/WorkSpace/NCKH/output/img_convert" + str(k) + ".JPG", clone_image)
+    # cv2.imwrite("/home/thinhdo/WorkSpace/NCKH/output/img_convert" + str(k) + ".JPG", clone_image)
+    cv2.imwrite("./output/img_convert" + str(k) + ".JPG", clone_image)
       # Hiển thị ảnh với bounding box
     cv2.imshow("Result", clone_image)
 
@@ -79,7 +77,8 @@ if __name__ == '__main__':
         color = (0, 255, 1)
         cv2.drawContours(clone_image_, [contour], -1, color, 1)
            # Lưu ảnh với contour
-    cv2.imwrite("/home/thinhdo/WorkSpace/NCKH/output/img_detect" + str(k) + ".JPG", clone_image_)
+    # cv2.imwrite("/home/thinhdo/WorkSpace/NCKH/output/img_detect" + str(k) + ".JPG", clone_image_)
+    cv2.imwrite("./output/img_detect" + str(k) + ".JPG", clone_image_)
 
     # Đợi người dùng nhập để đóng cửa sổ
     cv2.waitKey(0)

@@ -43,4 +43,5 @@ if __name__ == '__main__':
     # Tính trung bình các tọa độ của các đối tượng trong từng nhóm
     group_1_mean = np.mean(group_1, axis=0)
     group_2_mean = np.mean(group_2, axis=0)
+    
 
