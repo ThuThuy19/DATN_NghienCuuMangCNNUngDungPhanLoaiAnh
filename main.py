@@ -8,7 +8,7 @@ if __name__ == '__main__':
     path_model = './train18/weights/best.pt'
     model = YOLODetector(path_model)
      # Đọc ảnh đầu vào
-    image = cv2.imread("./images/4.JPG")
+    image = cv2.imread("./images/5.JPG")
 
     # Resize ảnh về kích thước 640x640
     clone_image = cv2.resize(image, (640, 640))
