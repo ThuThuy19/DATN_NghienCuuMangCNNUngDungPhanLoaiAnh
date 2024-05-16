@@ -1,11 +1,11 @@
-from detector import yolo  
+from detector import YOLODetector  
 import numpy as np  
 import cv2  
 from sklearn.cluster import KMeans  
 
 if __name__ == '__main__':
     path_model = './train18/weights/best.pt'  # Đường dẫn tới tập tin trọng số của mô hình YOLO
-    model = yolo(path_model)  # Tạo một đối tượng yolo với mô hình YOLO được tải từ đường dẫn
+    model = YOLODetector(path_model)  # Tạo một đối tượng yolo với mô hình YOLO được tải từ đường dẫn
     image = cv2.imread("./images/5.JPG")  # Đọc ảnh từ đường dẫn
     clone_image = cv2.resize(image, (640, 640))  # Resize ảnh về kích thước 640x640
     image = clone_image  # Gán ảnh đã resize cho biến image
